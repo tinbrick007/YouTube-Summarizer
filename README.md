@@ -9,3 +9,4 @@ Key features :
 - Fact checking is performed on transcript / summary generated and displays whether the information is true or false.
 - YouTube comments are analyzed for sentiments to obtain the usefulness of the video content.
 - Chat functionality where the user can ask questions related to the video content.
+- Text to audio functionality for the summary generated to be read out aloud.
