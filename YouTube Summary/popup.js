@@ -1,12 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('summary').textContent = 'Loading summary...';
+    const summaryElement = document.getElementById('summary');
+    const readAloudButton = document.getElementById('read-aloud-btn');
+    const closeButton = document.getElementById('close-btn');
+    let currentSummary = '';
 
-    // Send message to background script to get summary
+    function readSummaryAloud() {
+        chrome.tts.speak(currentSummary, {'rate': 1.0});
+    }
+
+    function closePopup() {
+        window.close(); // Closes the popup
+    }
+
+    // Fetch and display summary
     chrome.runtime.sendMessage({action: "getSummary"}, function(response) {
         if (response.summary) {
-            document.getElementById('summary').textContent = response.summary;
+            currentSummary = response.summary;
+            summaryElement.textContent = response.summary;
         } else {
-            document.getElementById('summary').textContent = 'Failed to load summary.';
+            summaryElement.textContent = 'Failed to load summary.';
         }
     });
+
+    // Event listeners
+    readAloudButton.addEventListener('click', readSummaryAloud);
+    closeButton.addEventListener('click', closePopup);
 });

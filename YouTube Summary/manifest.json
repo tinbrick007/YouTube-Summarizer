@@ -1,19 +1,22 @@
 {
-    "manifest_version": 3,
-    "name": "YouTube Summary Extension",
-    "version": "1.0",
-    "permissions": ["activeTab", "https://www.youtube.com/*"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
+  "manifest_version": 3,
+  "name": "YouTube Summary Extension 2.0",
+  "version": "1.0",
+  "description": "Generates and reads aloud summaries of YouTube videos.",
+  "permissions": [
+      "activeTab",
+      "tts"
+  ],
+  "action": {
       "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
+  },
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
           "matches": ["https://www.youtube.com/*"],
           "js": ["content.js"]
-        }
-    ]
-  }
-  
+      }
+  ]
+}
