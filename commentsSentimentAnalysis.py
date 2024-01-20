@@ -8,8 +8,6 @@ from googleapiclient.discovery import build
 # Download the VADER lexicon
 nltk.download('vader_lexicon')
 
-# ... (rest of your code)
-
 
 # Set up YouTube API key
 api_key = "AIzaSyB1Dd423xfCeCrWi_ddsvTWWvDsf_bPIQs"
