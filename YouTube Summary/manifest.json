@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Summary Extension 2.0",
+  "name": "YouTube Summary Extension 4.0",
   "version": "1.0",
   "description": "Generates and reads aloud summaries of YouTube videos.",
   "permissions": [
