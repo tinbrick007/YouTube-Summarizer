@@ -10,7 +10,7 @@ nltk.download('vader_lexicon')
 
 
 # Set up YouTube API key
-api_key = "AIzaSyB1Dd423xfCeCrWi_ddsvTWWvDsf_bPIQs"
+api_key = "YOUR_API_KEY"
 
 # Set up YouTube service
 youtube = build('youtube', 'v3', developerKey=api_key)
