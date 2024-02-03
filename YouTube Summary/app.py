@@ -8,15 +8,13 @@ import json
 import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 from googleapiclient.discovery import build
-
-
 app = Flask(__name__)
 CORS(app)
 
 nltk.download('vader_lexicon')
 
 # Set up YouTube API key and service
-api_key = "yourAPIkey"
+api_key = "Your_API_Key"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # Load BART model and tokenizer once
